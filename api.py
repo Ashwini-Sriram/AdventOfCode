@@ -11,10 +11,10 @@ def get_input(day):
     url = "https://adventofcode.com/2022/day/"+str(day)+"/input"
     headers = {'Cookie': f"session={sessionToken}"}
     response = requests.get(url, headers=headers)
-    print(response.status_code)
     if response.status_code == 200:
-        print(response.content)
-        return response.text
+        with open('input.txt','w') as fd:
+            fd.write(response.text)
+
     else:
         sys.exit(f"/api/alerts response: {response.status_code}: {response.reason} \n{response.content}")
 

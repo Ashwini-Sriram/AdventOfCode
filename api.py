@@ -12,7 +12,7 @@ def get_input(day):
     headers = {'Cookie': f"session={sessionToken}"}
     response = requests.get(url, headers=headers)
     if response.status_code == 200:
-        with open('input.txt','w') as fd:
+        with open(f'input{day}.txt','w') as fd:
             fd.write(response.text)
 
     else:

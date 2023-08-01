@@ -11,11 +11,11 @@ def call_solution(day):
 
 
 def fetch_input(day):
-    if os.path.exists(f'input{day}.txt'):
-        with open(f"input{day}.txt") as file:
-            input = file.read()
-            return input
-
-    else:
+    if not os.path.exists(f'input{day}.txt'):
         get_input(day)
+    with open(f"input{day}.txt") as file:
+        input = file.read()
+        return input
+
+
 

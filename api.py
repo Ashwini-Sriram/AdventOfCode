@@ -20,5 +20,3 @@ def get_input(day):
 
 
 
-
-get_input(1)

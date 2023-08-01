@@ -15,6 +15,7 @@ def get_input(day):
     headers = {'Cookie': f"session={sessionToken}"}
     r = requests.get(url, headers=headers)
     print(r.status_code)
+    print(type(r.content))
     if r.status_code == 200:
         return r.text 
     else:

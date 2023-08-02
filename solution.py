@@ -1,6 +1,10 @@
 
 #put your solution here
-def get_puzzle_answer(input):
+def get_puzzle_answer1(input):
 
-    puzzle_answer = 0
+    puzzle_answer = ''
+    return puzzle_answer
+
+def get_puzzle_answer2(input):
+    puzzle_answer = ''
     return puzzle_answer

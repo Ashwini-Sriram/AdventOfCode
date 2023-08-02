@@ -1,11 +1,11 @@
 import os.path
 
 from api import *
-from solution import get_puzzle_answer
+from solution import get_puzzle_answer1
 
 def call_solution(day):
     input = fetch_input(day)
-    get_puzzle_answer(input)
+    get_puzzle_answer1(input)
 
 
 

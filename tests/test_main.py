@@ -1,5 +1,4 @@
 import os
-import shutil
 from unittest.mock import patch
 from tests import BaseTestCase
 from api import *

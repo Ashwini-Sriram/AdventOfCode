@@ -1,5 +1,7 @@
 # AdventOfCode
 
+
+## How to start
 Step 1 : Developer fork the repo
 Step 2 : Update the day of question
 Step 3 : Get the AOC_Token (Steps are enlisted here)

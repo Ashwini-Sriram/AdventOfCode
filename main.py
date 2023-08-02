@@ -3,7 +3,6 @@ import os.path
 from api import *
 from solution import get_puzzle_answer
 
-
 def call_solution(day):
     input = fetch_input(day)
     get_puzzle_answer(input)

@@ -19,5 +19,14 @@ def get_input(day):
         sys.exit(f"/api/alerts response: {response.status_code}: {response.reason} \n{response.content}")
 
 
+def check_answer(day,answer):
+    url = "https://adventofcode.com/2022/day/"+str(day)+"/answer"
+    headers = {'Cookie': f"session={sessionToken}"}
+    response = requests.post(url,headers)
+    if response.status_code == 200:
+        print(response.text)
+    else:
+        sys.exit(f"/api/alerts response: {response.status_code}: {response.reason} \n{response.content}")
+       
 
 get_input(1)

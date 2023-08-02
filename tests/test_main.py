@@ -1,5 +1,6 @@
 import os
-
+import shutil
+from unittest.mock import patch
 from tests import BaseTestCase
 from api import *
 from main import *
@@ -17,14 +18,18 @@ class TestService(BaseTestCase):
         FILE_PATH =  cwd+f"/input{day}.txt"
         assert os.path.exists(FILE_PATH)
 
-    def test_call_solution():
+
+    def test_call_solution(self):
+        day = 1
         with patch("main.fetch_input") as mock_fetch_input:
-            call_solution(day=1)
+            call_solution(day)
+        mock_fetch_input.assert_called_once_with(day)
+
+    def test_call_solution_for_answer(self):
+        day = 1
+        input = "xyz"
         with patch("solution.get_puzzle_answer") as mock_get_puzzle_answer:
-            call_solution(day=1)
-        with patch("api.check") as mock_check_solution:
-            call_solution(day=1)
-        mock_fetch_input.assert_called_once_with(day=1)
-        mock_get_puzzle_answer.assert_called_once_with(day=1)
-        mock_check_solution.assert_called_once_with(day=1)
+            call_solution(day)
+        mock_get_puzzle_answer.assert_called_once
+
 

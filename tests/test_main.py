@@ -11,7 +11,7 @@ cwd = os.getcwd()
 class TestService(BaseTestCase):
 
 
-    def test_get_input(self):
+    def test_get_input_creates_inputfile(self):
         day = 1
         get_input(day)
         FILE_PATH =  cwd+f"/input{day}.txt"

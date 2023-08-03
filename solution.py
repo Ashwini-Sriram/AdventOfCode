@@ -1,11 +1,13 @@
+from puzzle import PuzzleSolutionInterfac
 
-#put your solution here
-def get_puzzle_answer1(input):
+class YourSolutionForPuzzle1(PuzzleSolutionInterfac):
+    def get_puzzle_answer(input):
+      #overrides PuzzleSolutionInterface.get_puzzle_answer()
+        puzzle_answer = ''
+        return puzzle_answer
 
-    puzzle_answer = ''
-    return puzzle_answer
-
-def get_puzzle_answer2(input):
-    
-    puzzle_answer = ''
-    return puzzle_answer
+class YourSolutionForPuzzle2(PuzzleSolutionInterfac):
+    def get_puzzle_answer(input):
+      #overrides PuzzleSolutionInterface.get_puzzle_answer()
+        puzzle_answer = ''
+        return puzzle_answer

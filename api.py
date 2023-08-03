@@ -19,6 +19,7 @@ def get_input(day):
         sys.exit(f"/api/alerts response: {response.status_code}: {response.reason} \n{response.content}")
 
 
+
 def check_answer(day,answer):
     url = "https://adventofcode.com/2022/day/"+str(day)+"/answer"
     headers = {'Cookie': f"session={sessionToken}"}
@@ -30,3 +31,4 @@ def check_answer(day,answer):
        
 
 get_input(1)
+

@@ -24,7 +24,6 @@ class TestService(BaseTestCase):
             call_solution(day)
         mock_fetch_input.assert_called_once_with(day)
 
-    # TODO complete test for get_puzzle_answer with actual input 
 
     def test_call_solution_for_answer(self):
         day = 1
@@ -35,11 +34,19 @@ class TestService(BaseTestCase):
 
     
 
-    # TODO add test for checking if input file writes only once
+
 
 
     def test_get_input_writes_only_once(self):
-        pass
+        day =1;
+        fetch_input(day)
+        if os.path.exists(f"input{day}.txt"):
+            with patch("api.get_input") as mock_get_input:
+                fetch_input(day)
+            mock_get_input.assert_not_called()
+
+
+
 
 
 

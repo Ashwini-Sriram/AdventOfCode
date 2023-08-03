@@ -28,7 +28,7 @@ class TestService(BaseTestCase):
 
     def test_call_solution_for_answer(self):
         day = 1
-        input = "xyz"
+
         with patch("solution.get_puzzle_answer") as mock_get_puzzle_answer:
             call_solution(day)
         mock_get_puzzle_answer.assert_called_once
@@ -40,6 +40,7 @@ class TestService(BaseTestCase):
 
     def test_get_input_writes_only_once(self):
         pass
+
 
 
 

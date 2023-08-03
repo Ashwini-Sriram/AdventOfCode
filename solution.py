@@ -6,5 +6,6 @@ def get_puzzle_answer1(input):
     return puzzle_answer
 
 def get_puzzle_answer2(input):
+    
     puzzle_answer = ''
     return puzzle_answer

@@ -38,7 +38,7 @@ class TestService(BaseTestCase):
 
 
     def test_get_input_writes_only_once(self):
-        day =1;
+        day =1
         fetch_input(day)
         if os.path.exists(f"input{day}.txt"):
             with patch("api.get_input") as mock_get_input:

@@ -3,8 +3,8 @@ from unittest.mock import patch
 from tests import BaseTestCase
 from api import *
 from main import *
-from solution import *
-
+from solution import YourSolutionForPuzzle1
+from solution import YourSolutionForPuzzle2
 cwd = os.getcwd()
 # cwd = os.path.normpath(os.getcwd() + os.sep + os.pardir)
 
@@ -28,7 +28,7 @@ class TestService(BaseTestCase):
     def test_call_solution_for_answer(self):
         day = 1
 
-        with patch("solution.get_puzzle_answer") as mock_get_puzzle_answer:
+        with patch("solution.YourSolutionForPuzzle1.get_puzzle_answer") as mock_get_puzzle_answer:
             call_solution(day)
         mock_get_puzzle_answer.assert_called_once
 
